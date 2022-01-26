@@ -50,12 +50,25 @@ function Mychart(data,title){
         maintainAspectRatio: false,
         legend: {display: true},
         scales: {
-        yAxes: [{ticks: {min: Math.min(...data)-20, max: Math.max(...data)+100}}],
+           yAxes: [{
+                ticks: {min: Math.min(...data)-20, max: Math.max(...data)+100},
+                gridLines: {
+                    color: '#af5578',
+                    lineWidth: 1
+                }
+            }],
+            xAxes: [{
+                gridLines: {
+                    color: '#af5578',
+                    lineWidth: 1
+                }
+            }],
         },
         title: {
             fontSize:30,
             display: true,
-            text: title
+            text: title,
+            fontColor: "blue"
         }
     }
     });
