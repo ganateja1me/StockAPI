@@ -37,6 +37,7 @@ function Mychart(data,title){
     data: {
         labels: xValues,
         datasets: [{
+        label: "close",
         fill: false,
         lineTension: 0,
         backgroundColor: "red",
@@ -45,7 +46,9 @@ function Mychart(data,title){
         }]
     },
     options: {
-        legend: {display: false},
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {display: true},
         scales: {
         yAxes: [{ticks: {min: Math.min(...data)-20, max: Math.max(...data)+100}}],
         },
